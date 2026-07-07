@@ -16,7 +16,7 @@ data-quality-monitor/
 │   │   ├── main.py            # FastAPI entrypoint
 │   │   ├── db.py               # MongoDB connection
 │   │   ├── quality_engine.py   # Pandas quality checks (5 dimensions)
-│   │   ├── rules_config.py     # Quality standards/thresholds (edit this to retune rules)
+│   │   ├── rules_config.py     # Quality standards/thresholds 
 │   │   ├── alerts.py           # Alert generation logic
 │   │   ├── scheduler.py        # APScheduler automated runs
 │   │   └── routers/            # checks / alerts / reports endpoints
@@ -33,7 +33,7 @@ data-quality-monitor/
 ```bash
 cd backend
 python3 -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
+source venv/bin/activate      
 pip install -r requirements.txt
 ```
 
@@ -99,10 +99,3 @@ no other code needs to change. This file is also your documentation of what
 "data quality" means for this dataset, useful to reference in the governance
 framework write-up.
 
-## Notes
-- The dataset is a downloaded snapshot (`layoffs.csv`), not a live feed, so
-  "timeliness" measures how recently the dataset file itself was refreshed
-  rather than per-row recency (this is a historical archive back to 2020;
-  individual old rows are expected, not an error).
-- Email alerting is stubbed out in `alerts.py` (disabled by default) — wire
-  up real SMTP credentials there if you want actual email notifications.
