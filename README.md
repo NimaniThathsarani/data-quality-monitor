@@ -92,10 +92,4 @@ Visit http://localhost:5173 — the dashboard talks to the backend at
    with trend sparklines, the active alert feed, and a table of currently
    failing checks.
 
-## Updating the rules
-All quality standards live in `backend/app/rules_config.py` — thresholds,
-which columns matter, and what counts as valid. Change the numbers there;
-no other code needs to change. This file is also your documentation of what
-"data quality" means for this dataset, useful to reference in the governance
-framework write-up.
 
